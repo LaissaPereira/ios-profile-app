@@ -6,19 +6,84 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		03FD9E9F30739E5F0011BAF7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 03FD9E7130739E5F0011BAF7 /* README.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03452A2730616A69003B3AAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 037954DD305D707300A08083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 037954E4305D707300A08083;
+			remoteInfo = ProfileApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		03452A2330616A69003B3AAC /* ProfileAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProfileAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		037954E5305D707300A08083 /* ProfileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProfileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03FD9E7130739E5F0011BAF7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		03452A2D30616AD5003B3AAC /* Exceptions for "ProfileApp" folder in "ProfileApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+				ProfileAppTests/AppRouterTests.swift,
+				ProfileAppTests/DeeplinkTests.swift,
+				ProfileAppTests/DefaultProfileRepositoryTests.swift,
+				ProfileAppTests/DownloadModelTests.swift,
+				ProfileAppTests/FreshCacheTests.swift,
+				ProfileAppTests/MockHTTPClient.swift,
+				ProfileAppTests/ProfileModelConcurrencyTests.swift,
+				ProfileAppTests/ProfileModelTests.swift,
+				ProfileAppTests/ProfileRequestCoordinatorTests.swift,
+				ProfileAppTests/RealProfileServiceTests.swift,
+				ProfileAppTests/StaleCachedProfileTests.swift,
+			);
+			target = 037954E4305D707300A08083 /* ProfileApp */;
+		};
+		03452A2E30616AD5003B3AAC /* Exceptions for "ProfileApp" folder in "ProfileAppTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ProfileAppTests/AppRouterTests.swift,
+				ProfileAppTests/DeeplinkTests.swift,
+				ProfileAppTests/DefaultProfileRepositoryTests.swift,
+				ProfileAppTests/DownloadModelTests.swift,
+				ProfileAppTests/FreshCacheTests.swift,
+				ProfileAppTests/MockHTTPClient.swift,
+				ProfileAppTests/ProfileModelConcurrencyTests.swift,
+				ProfileAppTests/ProfileModelTests.swift,
+				ProfileAppTests/ProfileRequestCoordinatorTests.swift,
+				ProfileAppTests/RealProfileServiceTests.swift,
+				ProfileAppTests/StaleCachedProfileTests.swift,
+			);
+			target = 03452A2230616A69003B3AAC /* ProfileAppTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		037954E7305D707300A08083 /* ProfileApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				03452A2D30616AD5003B3AAC /* Exceptions for "ProfileApp" folder in "ProfileApp" target */,
+				03452A2E30616AD5003B3AAC /* Exceptions for "ProfileApp" folder in "ProfileAppTests" target */,
+			);
 			path = ProfileApp;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		03452A2030616A69003B3AAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		037954E2305D707300A08083 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				037954E7305D707300A08083 /* ProfileApp */,
+				03FD9E7130739E5F0011BAF7 /* README.md */,
 				037954E6305D707300A08083 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				037954E5305D707300A08083 /* ProfileApp.app */,
+				03452A2330616A69003B3AAC /* ProfileAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +115,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		03452A2230616A69003B3AAC /* ProfileAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03452A2930616A69003B3AAC /* Build configuration list for PBXNativeTarget "ProfileAppTests" */;
+			buildPhases = (
+				03452A1F30616A69003B3AAC /* Sources */,
+				03452A2030616A69003B3AAC /* Frameworks */,
+				03452A2130616A69003B3AAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03452A2830616A69003B3AAC /* PBXTargetDependency */,
+			);
+			name = ProfileAppTests;
+			packageProductDependencies = (
+			);
+			productName = ProfileAppTests;
+			productReference = 03452A2330616A69003B3AAC /* ProfileAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		037954E4305D707300A08083 /* ProfileApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 037954F0305D707C00A08083 /* Build configuration list for PBXNativeTarget "ProfileApp" */;
@@ -80,6 +167,10 @@
 				LastSwiftUpdateCheck = 2650;
 				LastUpgradeCheck = 2650;
 				TargetAttributes = {
+					03452A2230616A69003B3AAC = {
+						CreatedOnToolsVersion = 26.5;
+						TestTargetID = 037954E4305D707300A08083;
+					};
 					037954E4305D707300A08083 = {
 						CreatedOnToolsVersion = 26.5;
 					};
@@ -100,21 +191,37 @@
 			projectRoot = "";
 			targets = (
 				037954E4305D707300A08083 /* ProfileApp */,
+				03452A2230616A69003B3AAC /* ProfileAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		037954E3305D707300A08083 /* Resources */ = {
+		03452A2130616A69003B3AAC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		037954E3305D707300A08083 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03FD9E9F30739E5F0011BAF7 /* README.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		03452A1F30616A69003B3AAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		037954E1305D707300A08083 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,7 +231,57 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		03452A2830616A69003B3AAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 037954E4305D707300A08083 /* ProfileApp */;
+			targetProxy = 03452A2730616A69003B3AAC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		03452A2A30616A69003B3AAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7BUDG436J3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Laissa.ProfileAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProfileApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ProfileApp";
+			};
+			name = Debug;
+		};
+		03452A2B30616A69003B3AAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7BUDG436J3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Laissa.ProfileAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProfileApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ProfileApp";
+			};
+			name = Release;
+		};
 		037954EE305D707C00A08083 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -256,6 +413,7 @@
 				DEVELOPMENT_TEAM = 7BUDG436J3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProfileApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -288,6 +446,7 @@
 				DEVELOPMENT_TEAM = 7BUDG436J3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProfileApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -313,6 +472,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		03452A2930616A69003B3AAC /* Build configuration list for PBXNativeTarget "ProfileAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03452A2A30616A69003B3AAC /* Debug */,
+				03452A2B30616A69003B3AAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		037954E0305D707300A08083 /* Build configuration list for PBXProject "ProfileApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
