@@ -10,5 +10,6 @@ import Foundation
 protocol ProfileCache : Sendable {
     func load() async -> CachedProfile?
     func save(_ profile: Profile, saveAt: Date) async
+    func remove() async
 }
 

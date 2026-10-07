@@ -18,7 +18,14 @@ extension AppDependencies {
         
         let service = RealProfileService(client: client)
         
-        let cache = InMemoryProfileCache()
+        let cacheDirectory = FileManager.default.urls(
+            for: .cachesDirectory,
+            in: .userDomainMask)[0]
+        
+        let profileCacheURL = cacheDirectory
+            .appendingPathComponent("profile-cache.json")
+        
+        let cache = FileProfileCache(fileURL: profileCacheURL)
         
         let requestCoordinator = ProfileRequestCoordinator()
         

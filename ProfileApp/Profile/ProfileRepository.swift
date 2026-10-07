@@ -9,10 +9,11 @@ import Foundation
 
 protocol ProfileRepository : Sendable {
     
-    
     func fetchProfile() async throws -> Profile
     
     func profileStream(forceRefresh: Bool) -> AsyncThrowingStream<ProfileUpdate, Error>
+    
+    func clearCache() async
 }
 
 
@@ -36,5 +37,7 @@ struct MockProfileRepository: ProfileRepository {
                 continuation.finish(throwing: error)
             }
         }
+        
     }
+    func clearCache() async {}
 }

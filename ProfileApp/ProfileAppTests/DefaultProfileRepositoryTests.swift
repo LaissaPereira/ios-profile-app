@@ -14,6 +14,7 @@ actor SpyProfileCache: ProfileCache {
     private var cachedProfile: CachedProfile?
 
     private(set) var saveCallCount = 0
+    private(set) var removeCallCount = 0
 
     func load() -> CachedProfile? {
         cachedProfile
@@ -29,6 +30,11 @@ actor SpyProfileCache: ProfileCache {
             profile: profile,
             savedAt: saveAt
         )
+    }
+    
+    func remove() {
+        removeCallCount += 1
+        cachedProfile = nil
     }
 }
 
@@ -455,5 +461,47 @@ struct DefaultProfileRepositoryTests {
         #expect(remoteCallCount == 1)
         #expect(cacheSaveCount == 1)
     }
+    @Test("Clearing repository cache removes cached profile")
+    func clearingRepositoryCacheRemovesCachedProfile() async {
 
+        let now = Date(
+            timeIntervalSince1970: 1_000
+        )
+
+        let profile = Profile(
+            name: "Laissa",
+            city: "Berlin",
+            skills: ["Swift"],
+            followers: 381
+        )
+
+        let service = SpyProfileService(
+            result: .success(profile)
+        )
+
+        let cache = SpyProfileCache()
+
+        await cache.save(
+            profile,
+            saveAt: now
+        )
+
+        let repository = DefaultProfileRepository(
+            remoteService: service,
+            cache: cache,
+            dateProvider: FixedDateProvider(
+                date: now
+            ),
+            cacheLifetime: 300,
+            requestCoordinator:
+                ProfileRequestCoordinator()
+        )
+
+        #expect(await cache.load() != nil)
+
+        await repository.clearCache()
+
+        #expect(await cache.load() == nil)
+        #expect(await cache.removeCallCount == 1)
+    }
 }

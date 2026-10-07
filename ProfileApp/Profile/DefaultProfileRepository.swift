@@ -14,6 +14,10 @@ struct DefaultProfileRepository: ProfileRepository {
     let dateProvider: any DateProvider
     let cacheLifetime: TimeInterval
     let requestCoordinator: ProfileRequestCoordinator
+    
+    func clearCache() async {
+        await cache.remove()
+    }
 
     func fetchProfile() async throws -> Profile {
 
@@ -89,8 +93,13 @@ struct DefaultProfileRepository: ProfileRepository {
             continuation.onTermination = { _ in
                 task.cancel()
             }
+            
+            
         }
+    
     }
+    
+    
 
     private func fetchAndCacheFreshProfile() async throws -> Profile {
 

@@ -25,6 +25,7 @@ struct MockProfileRepository: ProfileRepository {
             }
         }
     }
+    func clearCache() async {}
 }
 
 final class ControlledProfileRepository: ProfileRepository {
@@ -40,6 +41,8 @@ final class ControlledProfileRepository: ProfileRepository {
                     self.continuation = continuation
                 }
     }
+    func clearCache() async {}
+    
     func succeed(with profile: Profile) {
         continuation?.yield(.fresh(profile))
         continuation?.finish()
@@ -79,6 +82,7 @@ struct SlowProfileRepository: ProfileRepository {
             }
         }
     }
+    func clearCache() async {}
 }
 
 // Test verify if ProfileModel is update the state correctly

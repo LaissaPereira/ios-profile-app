@@ -18,4 +18,7 @@ actor InMemoryProfileCache: ProfileCache {
             savedAt: saveAt
         )
     }
+    func remove() {
+        cachedProfile = nil
+    }
 }

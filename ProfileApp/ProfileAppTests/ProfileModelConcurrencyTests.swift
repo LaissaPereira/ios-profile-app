@@ -30,6 +30,7 @@ final class TwoRequestProfileRepository : ProfileRepository {
             
         }
     }
+    func clearCache() async {}
     
     func completeFirst(with profile: Profile){
         firstContinuation?.yield(.fresh(profile))

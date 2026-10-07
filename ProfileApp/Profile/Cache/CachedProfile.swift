@@ -11,3 +11,4 @@ struct CachedProfile : Sendable {
     let profile : Profile
     let savedAt : Date
 }
+//Domain/cache concept
